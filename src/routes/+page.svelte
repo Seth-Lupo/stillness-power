@@ -51,7 +51,7 @@
       <h2 class="text-5xl font-bold text-gray-900 mb-8">{homepage.mission.title}</h2>
       <div class="max-w-4xl mx-auto">
         <p class="text-xl text-gray-700 leading-relaxed">
-          Stillness Power is dedicated to providing communities with meditative and prayerful approach to holistic health and wellness. Through various education programs, Stillness Power is dedicated to teaching simple, easy and practical way to well-being. The value of long-lasting meditative approach to well-being will be appreciated since it will influence our lifestyle and choices we make in our life. Stillness Power is committed to providing strong and experienced leadership to organizations and individuals who want to integrate holistic strategies into their healthcare programs.
+          {homepage.mission.description}
         </p>
       </div>
     </div>
@@ -69,7 +69,7 @@
     <div class="grid md:grid-cols-3 gap-8">
       {#each homepage.classTypes as classType, index}
         {@const colors = ['from-purple-500 to-pink-500', 'from-blue-500 to-indigo-600', 'from-orange-500 to-red-500']}
-        {@const iconNames = ['self_improvement', 'flight', 'videocam']}
+        {@const iconNames = ['self_improvement', 'raven', 'videocam']}
         
         <div class="group animate-slide-up bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105" style="animation-delay: {index * 0.2}s;">
           <div class="bg-gradient-to-br {colors[index]} w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-all duration-300 shadow-xl">
@@ -86,6 +86,64 @@
   </div>
 </section>
 
+<!-- Founder Philosophy Section -->
+<section class="relative py-24 bg-gradient-to-br from-purple-100 via-indigo-50 to-blue-100 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
+  
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="animate-fade-in-up">
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50">
+          <div class="text-center mb-8">
+            <div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-purple-200 shadow-lg">
+              <img 
+                src="/images/241492_1742366195907_1141264628_31426192_8285812_o-3.jpg" 
+                alt="Sanjyot Lupo" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-bold text-gray-900 mb-2">Sanjyot Lupo</h3>
+            <p class="text-xl text-purple-600 font-medium">Creator of Stillness Power®</p>
+          </div>
+          
+          <blockquote class="text-center mb-8">
+            <p class="text-2xl text-gray-700 font-light leading-relaxed italic">
+              "Soul can be neither created nor destroyed, it takes only different forms. So take the time to honor the indestructible and get to know it when you can"
+            </p>
+            <cite class="text-purple-600 font-semibold">— Sanjyot</cite>
+          </blockquote>
+          
+          <div class="text-center">
+            <a href="/about" class="btn btn-primary text-lg px-8 py-4">
+              Learn More About Our Founder
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
+        <h2 class="text-5xl font-bold text-gray-900 mb-8">Our Foundation</h2>
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+          <p>
+            Sanjyot is a certified yoga instructor with specialized expertise in Breath Control, Meditation & Stress Management practices. With over 500 hours of teaching experience since 2011, she brings both scientific understanding and deep spiritual wisdom to her practice.
+          </p>
+          <p>
+            Born with an inherently positive attitude, Sanjyot's own journey through motherhood and personal challenges led her to seek both scientific and practical healing methods. She realizes that only inner peace and realization of the Self brings Bliss, Power, Knowledge and Ultimate Freedom that aids renewal and healing.
+          </p>
+          <p>
+            One of her greatest skills is her ability to connect with people regardless of their background, focusing primarily on Postures, Kriyas, Pranayama and Meditation in all her programs.
+          </p>
+          <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-6 text-white">
+            <p class="text-xl font-medium text-center">
+              "The Proof is in the Practice!" — Sanjyot's philosophy for skeptics
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Sessions Info Section -->
 <section class="relative py-24 bg-white overflow-hidden">
   <!-- Background elements -->
@@ -98,24 +156,92 @@
       <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
         {homepage.sessions.description}
       </p>
+      <div class="mt-8">
+        <p class="text-lg text-purple-600 font-medium">
+          {homepage.sessions.callToAction}
+        </p>
+      </div>
     </div>
     
-    <div class="grid md:grid-cols-3 gap-8">
-      {#each [
-        { icon: 'location_on', text: 'N Chelmsford, MA', color: 'from-orange-500 to-red-500' },
-        { icon: 'schedule', text: 'Daily Classes', color: 'from-purple-500 to-indigo-600' },
-        { icon: 'group', text: 'All Levels Welcome', color: 'from-blue-500 to-purple-500' }
-      ] as info, index}
-        <div class="group animate-slide-up bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100/50" style="animation-delay: {index * 0.2}s;">
-          <div class="bg-gradient-to-br {info.color} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-12 transition-all duration-300 shadow-lg">
-            <Icon name="{info.icon}" style="color: white;" size="32" />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100/50">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+              <Icon name="location_on" style="color: white;" size="24" />
+            </div>
+            <span class="text-lg font-semibold text-gray-800">N Chelmsford, MA</span>
           </div>
-          <p class="text-xl font-semibold text-gray-800 text-center">{info.text}</p>
-          <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="w-full h-1 bg-gradient-to-r {info.color} rounded-full"></div>
+          
+          <div class="hidden md:block w-px h-8 bg-gray-300"></div>
+          
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center">
+              <Icon name="schedule" style="color: white;" size="24" />
+            </div>
+            <span class="text-lg font-semibold text-gray-800">Daily Classes</span>
+          </div>
+          
+          <div class="hidden md:block w-px h-8 bg-gray-300"></div>
+          
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+              <Icon name="group" style="color: white;" size="24" />
+            </div>
+            <span class="text-lg font-semibold text-gray-800">All Levels Welcome</span>
           </div>
         </div>
-      {/each}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Preview Section -->
+<section class="relative py-24 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-20"></div>
+  
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-5xl font-bold mb-6">What Our Students Say</h2>
+      <p class="text-xl text-indigo-200">Real experiences from our Stillness Power® community</p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="animate-slide-up bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <Icon name="person" style="color: white;" size="24" />
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-white">Julie</h4>
+            <p class="text-indigo-200">Long-time Practitioner</p>
+          </div>
+        </div>
+        <blockquote class="text-lg leading-relaxed text-gray-100 italic ml-16">
+          "Yoga seems such a weak term for these classes! This process of being led to going deep within yourself to hear your own body's wisdom, find peacefulness, release negativity and open up to healing... these aspects are quite unique from any other yoga, exercise or meditation classes I have taken."
+        </blockquote>
+      </div>
+      
+      <div class="animate-slide-up bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20" style="animation-delay: 0.2s;">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <Icon name="person" style="color: white;" size="24" />
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold text-white">Doris</h4>
+            <p class="text-indigo-200">Cancer Survivor</p>
+          </div>
+        </div>
+        <blockquote class="text-lg leading-relaxed text-gray-100 italic ml-16">
+          "Having my share of medical problems (cancer survivor) & weight issues, I tend to shy away from a lot of classes. I was very impressed as I loved the mixture of yoga, breathing, stretching, concentration and bliss. Sanjyot's positive energy helps keep me inspired."
+        </blockquote>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12 animate-fade-in-up" style="animation-delay: 0.4s;">
+      <a href="/testimonials" class="btn bg-white text-indigo-900 hover:bg-indigo-50 text-lg px-8 py-4 font-semibold">
+        Read More Stories
+      </a>
     </div>
   </div>
 </section>
