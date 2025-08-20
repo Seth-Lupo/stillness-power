@@ -109,5 +109,8 @@ export const navigation = [
 export const socialLinks = {
   website: "http://www.OMStudioCentral.com",
   email: "info@omstudiocentral.com",
-  phone: "(978) 302-6249"
+  phone: "(978) 302-6249",
+  linkedin: "https://www.linkedin.com/in/sanjyotchatwani/",
+  instagram: "https://www.instagram.com/stillness_power/?hl=en",
+  facebook: "https://www.facebook.com/StillnessPowerBySanjyot/"
 };

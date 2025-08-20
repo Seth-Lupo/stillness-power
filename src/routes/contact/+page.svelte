@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { siteContent } from '$lib/data/content';
+  import { siteContent, socialLinks } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import SocialIcon from '$lib/components/SocialIcon.svelte';
   
   const { homepage } = siteContent;
   const { contact } = homepage;
@@ -141,6 +142,69 @@
                   class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors flex items-center gap-1"
                 >
                   OMStudioCentral.com
+                  <Icon name="open_in_new" style="color: currentColor;" size="14" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-purple-100/50 mb-6">
+          <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <Icon name="share" style="color: rgb(147 51 234);" size="20" />
+            Connect with Sanjyot
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                <SocialIcon platform="linkedin" size="40" />
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900">LinkedIn</h4>
+                <a 
+                  href={socialLinks.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors flex items-center gap-1"
+                >
+                  Follow Sanjyot's professional updates
+                  <Icon name="open_in_new" style="color: currentColor;" size="14" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                <SocialIcon platform="instagram" size="40" />
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900">Instagram</h4>
+                <a 
+                  href={socialLinks.instagram} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors flex items-center gap-1"
+                >
+                  @stillness_power
+                  <Icon name="open_in_new" style="color: currentColor;" size="14" />
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                <SocialIcon platform="facebook" size="40" />
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900">Facebook</h4>
+                <a 
+                  href={socialLinks.facebook} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors flex items-center gap-1"
+                >
+                  Stillness Power Community
                   <Icon name="open_in_new" style="color: currentColor;" size="14" />
                 </a>
               </div>
