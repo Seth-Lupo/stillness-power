@@ -1,5 +1,6 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
+  import Icon from '$lib/components/Icon.svelte';
   
   const { partners } = siteContent;
 </script>
@@ -10,117 +11,111 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-brand-sky/10 via-brand-violet/5 to-brand-lavender/10 py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-brand-black sm:text-5xl">
-        {partners.title}
-      </h1>
-      <p class="mt-6 text-lg text-brand-gray max-w-2xl mx-auto">
-        {partners.subtitle}
-      </p>
+<section class="relative min-h-[60vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-indigo-900/80 to-blue-900/70"></div>
+
+  <div class="relative z-10 w-full">
+    <div class="mx-auto max-w-6xl px-6 text-center text-white">
+      <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          <span class="inline-block animate-slide-up" style="animation-delay: 0.3s;">{partners.title}</span>
+        </h1>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+        <p class="text-xl md:text-2xl mb-12 text-purple-100 font-light max-w-3xl mx-auto">
+          {partners.subtitle}
+        </p>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.9s;">
+        <a href="#partnership-types" class="btn btn-primary text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+          Explore Partnership Options
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Partnership Types -->
-<section class="py-24 bg-brand-white">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<section id="partnership-types" class="relative py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
+
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-5xl font-bold text-gray-900 mb-8">Partnership Options</h2>
+      <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+        Choose the partnership model that best fits your organization's needs and goals.
+      </p>
+    </div>
+    
+    <div class="grid lg:grid-cols-2 gap-16">
       <!-- Corporate Partnerships -->
-      <div class="card p-8">
-        <div class="flex items-center mb-6">
-          <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-violet to-brand-lavender flex items-center justify-center mr-4">
-            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m2.25-18v18m13.5-18v18M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.75m-3.75 3h.75m-3.75 3h.75m-3.75 3h.75M9 21v-7.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" />
-            </svg>
+      <div class="animate-fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="bg-gradient-to-br from-purple-500 to-pink-500 w-16 h-16 rounded-2xl flex items-center justify-center shadow-xl">
+            <Icon name="business" style="color: white;" size="32" />
           </div>
-          <h2 class="text-2xl font-bold text-brand-black">
+          <h2 class="text-3xl font-bold text-gray-900">
             Corporate Wellness
           </h2>
         </div>
         
-        <p class="text-brand-gray mb-6">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
           Bring holistic wellness to your workplace with our comprehensive corporate programs designed to reduce stress, improve focus, and enhance employee well-being.
         </p>
         
-        <div class="space-y-3 mb-8">
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-violet mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">On-site wellness sessions</span>
-          </div>
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-violet mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">Stress reduction workshops</span>
-          </div>
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-violet mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">Team building activities</span>
-          </div>
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-violet mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">Flexible scheduling options</span>
-          </div>
+        <div class="space-y-4 mb-8">
+          {#each [
+            'On-site wellness sessions',
+            'Stress reduction workshops', 
+            'Team building activities',
+            'Flexible scheduling options'
+          ] as feature}
+            <div class="flex items-center">
+              <div class="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-3 flex-shrink-0"></div>
+              <span class="text-gray-700">{feature}</span>
+            </div>
+          {/each}
         </div>
         
-        <a href="/contact" class="btn btn-primary w-full">
+        <a href="/contact" class="btn btn-primary text-lg px-8 py-4 w-full">
           Discuss Corporate Programs
         </a>
       </div>
       
       <!-- Non-Profit Partnerships -->
-      <div class="card p-8">
-        <div class="flex items-center mb-6">
-          <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-sky to-brand-lavender flex items-center justify-center mr-4">
-            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-            </svg>
+      <div class="animate-fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50" style="animation-delay: 0.2s;">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="bg-gradient-to-br from-blue-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center shadow-xl">
+            <Icon name="favorite" style="color: white;" size="32" />
           </div>
-          <h2 class="text-2xl font-bold text-brand-black">
+          <h2 class="text-3xl font-bold text-gray-900">
             Non-Profit Programs
           </h2>
         </div>
         
-        <p class="text-brand-gray mb-6">
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
           {partners.nonprofit.description}
         </p>
         
-        <div class="space-y-3 mb-8">
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-sky mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">One-time workshops</span>
-          </div>
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-sky mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">Sustainable long-term programs</span>
-          </div>
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-sky mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">Member & non-member access</span>
-          </div>
-          <div class="flex items-center">
-            <svg class="h-5 w-5 text-brand-sky mr-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-brand-gray">Community-focused approach</span>
-          </div>
+        <div class="space-y-4 mb-8">
+          {#each [
+            'One-time workshops',
+            'Sustainable long-term programs',
+            'Member & non-member access',
+            'Community-focused approach'
+          ] as feature}
+            <div class="flex items-center">
+              <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mr-3 flex-shrink-0"></div>
+              <span class="text-gray-700">{feature}</span>
+            </div>
+          {/each}
         </div>
         
-        <a href="/contact" class="btn btn-secondary w-full">
+        <a href="/contact" class="btn bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 w-full">
           Explore Non-Profit Options
         </a>
       </div>
@@ -129,111 +124,90 @@
 </section>
 
 <!-- How It Works -->
-<section class="py-24 bg-gray-50">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-        How Partnership Works
-      </h2>
-      <p class="mt-6 text-lg text-brand-gray max-w-2xl mx-auto">
+<section class="relative py-24 bg-indigo-600 text-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-20"></div>
+  
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-5xl font-bold mb-6">How Partnership Works</h2>
+      <p class="text-xl text-indigo-200 max-w-3xl mx-auto">
         Our simple process to bring Stillness Power® programs to your organization.
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="mx-auto h-16 w-16 rounded-full bg-brand-violet text-white flex items-center justify-center mb-6 text-2xl font-bold">
-          1
+    <div class="grid md:grid-cols-3 gap-8">
+      {#each [
+        { number: '1', title: 'Initial Consultation', description: 'We discuss your organization\'s needs, goals, and preferred program structure during a comprehensive consultation.', color: 'from-purple-500 to-pink-500' },
+        { number: '2', title: 'Custom Program Design', description: 'We create a tailored wellness program that fits your schedule, space, and participant needs.', color: 'from-blue-500 to-indigo-600' },
+        { number: '3', title: 'Program Implementation', description: 'Our certified instructors deliver high-quality sessions while you track progress and participant satisfaction.', color: 'from-orange-500 to-red-500' }
+      ] as step, index}
+        <div class="group animate-slide-up bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 text-center" style="animation-delay: {index * 0.2}s;">
+          <div class="bg-gradient-to-br {step.color} w-20 h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:rotate-12 transition-all duration-300 shadow-xl">
+            <span class="text-2xl font-bold text-white">{step.number}</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">{step.title}</h3>
+          <p class="text-indigo-200 text-lg leading-relaxed">{step.description}</p>
+          <div class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="w-full h-1 bg-gradient-to-r {step.color} rounded-full"></div>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-brand-black mb-4">
-          Initial Consultation
-        </h3>
-        <p class="text-brand-gray">
-          We discuss your organization's needs, goals, and preferred program structure during a comprehensive consultation.
-        </p>
-      </div>
-      
-      <div class="text-center">
-        <div class="mx-auto h-16 w-16 rounded-full bg-brand-lavender text-white flex items-center justify-center mb-6 text-2xl font-bold">
-          2
-        </div>
-        <h3 class="text-xl font-semibold text-brand-black mb-4">
-          Custom Program Design
-        </h3>
-        <p class="text-brand-gray">
-          We create a tailored wellness program that fits your schedule, space, and participant needs.
-        </p>
-      </div>
-      
-      <div class="text-center">
-        <div class="mx-auto h-16 w-16 rounded-full bg-brand-sky text-white flex items-center justify-center mb-6 text-2xl font-bold">
-          3
-        </div>
-        <h3 class="text-xl font-semibold text-brand-black mb-4">
-          Program Implementation
-        </h3>
-        <p class="text-brand-gray">
-          Our certified instructors deliver high-quality sessions while you track progress and participant satisfaction.
-        </p>
-      </div>
+      {/each}
     </div>
   </div>
 </section>
 
 <!-- Benefits Section -->
-<section class="py-24 bg-brand-white">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
+<section class="relative py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
+
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="animate-fade-in-up">
+        <h2 class="text-5xl font-bold text-gray-900 mb-8">
           Partnership Benefits
         </h2>
-        <p class="mt-6 text-lg text-brand-gray">
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
           When you partner with Stillness Power®, you're investing in proven wellness practices that create lasting positive change.
         </p>
         
-        <div class="mt-8 space-y-4">
-          <div class="flex items-start">
-            <svg class="h-6 w-6 text-brand-violet mr-4 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-            </svg>
-            <div>
-              <h4 class="text-lg font-semibold text-brand-black">Reduced Stress & Anxiety</h4>
-              <p class="text-brand-gray">Proven techniques for managing workplace stress and promoting mental wellness.</p>
+        <div class="space-y-6">
+          {#each [
+            { icon: 'psychology', title: 'Reduced Stress & Anxiety', description: 'Proven techniques for managing workplace stress and promoting mental wellness.', color: 'text-purple-600' },
+            { icon: 'trending_up', title: 'Increased Productivity', description: 'Enhanced focus and clarity leading to improved performance and job satisfaction.', color: 'text-blue-600' },
+            { icon: 'groups', title: 'Stronger Team Cohesion', description: 'Shared wellness experiences that build stronger relationships and team unity.', color: 'text-orange-600' }
+          ] as benefit}
+            <div class="flex items-start gap-4 p-4 bg-white/80 rounded-2xl shadow-lg">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-100 to-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Icon name="{benefit.icon}" style="color: {benefit.color === 'text-purple-600' ? '#9333ea' : benefit.color === 'text-blue-600' ? '#2563eb' : '#ea580c'};" size="24" />
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h4>
+                <p class="text-gray-700 leading-relaxed">{benefit.description}</p>
+              </div>
             </div>
-          </div>
-          
-          <div class="flex items-start">
-            <svg class="h-6 w-6 text-brand-violet mr-4 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-            </svg>
-            <div>
-              <h4 class="text-lg font-semibold text-brand-black">Increased Productivity</h4>
-              <p class="text-brand-gray">Enhanced focus and clarity leading to improved performance and job satisfaction.</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start">
-            <svg class="h-6 w-6 text-brand-violet mr-4 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-            </svg>
-            <div>
-              <h4 class="text-lg font-semibold text-brand-black">Stronger Team Cohesion</h4>
-              <p class="text-brand-gray">Shared wellness experiences that build stronger relationships and team unity.</p>
-            </div>
-          </div>
+          {/each}
         </div>
       </div>
       
-      <div class="relative">
-        <img 
-          src="/images/group.jpg" 
-          alt="Group wellness session" 
-          class="rounded-2xl shadow-2xl"
-        />
-        <div class="absolute -bottom-6 -right-6 bg-brand-sky text-white p-6 rounded-xl shadow-lg">
-          <p class="font-semibold">Look for our</p>
-          <p class="text-sm opacity-90">Luminous Logo</p>
+      <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
+        <div class="relative group">
+          <div class="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            <img 
+              src="/images/group.jpg" 
+              alt="Group wellness session" 
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-gradient-to-br from-orange-500 to-red-500 text-white p-6 rounded-2xl shadow-2xl">
+            <div class="flex items-center gap-3">
+              <Icon name="verified" style="color: white;" size="24" />
+              <div>
+                <p class="font-semibold text-lg">Look for our</p>
+                <p class="text-orange-100">Luminous Logo</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -241,36 +215,42 @@
 </section>
 
 <!-- Contact Section -->
-<section class="py-24 bg-gray-50">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl mb-6">
-        {partners.contact.title}
+<section class="relative py-24 bg-orange-500 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
+
+  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
+    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+      <h2 class="text-6xl font-bold mb-8 leading-tight">
+        <span class="inline-block animate-slide-up">{partners.contact.title}</span>
       </h2>
-      <p class="text-lg text-brand-gray mb-8 max-w-2xl mx-auto">
+    </div>
+    
+    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
         {partners.contact.lookFor}
       </p>
-      
-      <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto">
-        <div class="text-center mb-6">
-          <div class="h-16 w-16 rounded-full bg-gradient-to-br from-brand-violet to-brand-lavender flex items-center justify-center mx-auto mb-4">
-            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-            </svg>
+    </div>
+    
+    <div class="animate-fade-in-up max-w-md mx-auto" style="animation-delay: 0.9s;">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-orange-200/50">
+        <div class="text-center mb-8">
+          <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+            <Icon name="phone" style="color: white;" size="32" />
           </div>
-          <h3 class="text-xl font-semibold text-brand-black">Ready to Partner?</h3>
-          <p class="text-brand-gray mt-2">Call us to discuss terms and conditions</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Ready to Partner?</h3>
+          <p class="text-gray-700">Call us to discuss terms and conditions</p>
         </div>
         
-        <a 
-          href="tel:978.272.1339" 
-          class="btn btn-primary w-full text-xl py-4"
-        >
-          (978) 272-1339
-        </a>
-        
-        <div class="mt-4">
-          <a href="/contact" class="btn btn-outline w-full">
+        <div class="space-y-4">
+          <a 
+            href="tel:+19782721339" 
+            class="btn bg-orange-500 text-white hover:bg-orange-600 w-full text-xl py-4 font-bold"
+          >
+            (978) 272-1339
+          </a>
+          
+          <a href="/contact" class="btn border-2 border-orange-500 text-orange-600 hover:bg-orange-50 w-full py-4">
             Contact Form
           </a>
         </div>

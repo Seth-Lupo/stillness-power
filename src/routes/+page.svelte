@@ -35,7 +35,7 @@
         <a href="/classes" class="btn btn-primary text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
           Start Your Journey
         </a>
-        <a href="/contact" class="btn btn-outline border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+        <a href="/contact" class="btn btn-outline border-2 border-orange-400 text-orange-400 text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
           Book Session
         </a>
       </div>
@@ -97,7 +97,7 @@
           <div class="text-center mb-8">
             <div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-purple-200 shadow-lg">
               <img 
-                src="/images/241492_1742366195907_1141264628_31426192_8285812_o-3.jpg" 
+                src="/images/sanjyot.jpg" 
                 alt="Sanjyot Lupo" 
                 class="w-full h-full object-cover"
               />

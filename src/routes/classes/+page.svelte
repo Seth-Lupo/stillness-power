@@ -1,5 +1,6 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
+  import Icon from '$lib/components/Icon.svelte';
   
   const { homepage } = siteContent;
   
@@ -55,74 +56,120 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-brand-lavender/10 via-brand-sky/5 to-brand-violet/10 py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-brand-black sm:text-5xl">
-        Classes & Services
-      </h1>
-      <p class="mt-6 text-lg text-brand-gray max-w-2xl mx-auto">
-        Discover our comprehensive range of holistic wellness practices designed to nurture your mind, body, and spirit.
-      </p>
+<section class="relative min-h-[60vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/90 via-purple-900/80 to-blue-900/70"></div>
+
+  <div class="relative z-10 w-full">
+    <div class="mx-auto max-w-6xl px-6 text-center text-white">
+      <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          <span class="inline-block animate-slide-up" style="animation-delay: 0.3s;">Classes &</span>
+          <span class="inline-block animate-slide-up text-orange-400" style="animation-delay: 0.5s;">Services</span>
+        </h1>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+        <p class="text-xl md:text-2xl mb-12 text-purple-100 font-light max-w-3xl mx-auto">
+          Discover our comprehensive range of holistic wellness practices designed to nurture your mind, body, and spirit.
+        </p>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.9s;">
+        <a href="#classes" class="btn btn-primary text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+          Explore Our Classes
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Class Types Grid -->
-<section class="py-24 bg-brand-white">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section id="classes" class="relative py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
+
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-5xl font-bold text-gray-900 mb-8">Our Practice Types</h2>
+      <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+        Each practice type is thoughtfully designed to meet you where you are on your wellness journey.
+      </p>
+    </div>
+    
     <div class="space-y-16">
       {#each classDetails as classItem, index}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center {index % 2 === 1 ? 'lg:flex-row-reverse' : ''}">
-          <div class="{index % 2 === 1 ? 'lg:order-2' : ''}">
-            <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-              {classItem.name}
-            </h2>
-            <p class="mt-6 text-lg text-brand-gray leading-relaxed">
-              {classItem.description}
-            </p>
-            
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h4 class="font-semibold text-brand-black mb-2">Duration</h4>
-                <p class="text-brand-gray">{classItem.duration}</p>
+        {@const colors = ['from-purple-500 to-pink-500', 'from-blue-500 to-indigo-600', 'from-orange-500 to-red-500']}
+        {@const iconNames = ['self_improvement', 'raven', 'videocam']}
+        
+        <div class="animate-fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50" style="animation-delay: {index * 0.2}s;">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="{index % 2 === 1 ? 'lg:order-2' : ''}">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="bg-gradient-to-br {colors[index]} w-16 h-16 rounded-2xl flex items-center justify-center shadow-xl">
+                  <Icon name="{iconNames[index]}" style="color: white;" size="32" />
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">
+                  {classItem.name}
+                </h2>
               </div>
-              <div class="bg-gray-50 p-4 rounded-lg">
-                <h4 class="font-semibold text-brand-black mb-2">Level</h4>
-                <p class="text-brand-gray">{classItem.level}</p>
+              
+              <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                {classItem.description}
+              </p>
+              
+              <div class="grid md:grid-cols-2 gap-4 mb-8">
+                <div class="bg-gradient-to-r from-purple-100 to-indigo-100 p-4 rounded-xl border border-purple-200">
+                  <div class="flex items-center gap-2 mb-2">
+                    <Icon name="schedule" style="color: #7c3aed;" size="20" />
+                    <h4 class="font-semibold text-gray-900">Duration</h4>
+                  </div>
+                  <p class="text-gray-700">{classItem.duration}</p>
+                </div>
+                <div class="bg-gradient-to-r from-blue-100 to-purple-100 p-4 rounded-xl border border-blue-200">
+                  <div class="flex items-center gap-2 mb-2">
+                    <Icon name="trending_up" style="color: #3b82f6;" size="20" />
+                    <h4 class="font-semibold text-gray-900">Level</h4>
+                  </div>
+                  <p class="text-gray-700">{classItem.level}</p>
+                </div>
               </div>
-            </div>
-            
-            <div class="mt-8">
-              <h4 class="font-semibold text-brand-black mb-4">What's Included:</h4>
-              <ul class="space-y-2">
-                {#each classItem.features as feature}
-                  <li class="flex items-center text-brand-gray">
-                    <svg class="h-5 w-5 text-brand-violet mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    {feature}
-                  </li>
-                {/each}
-              </ul>
-            </div>
-            
-            <div class="mt-8">
-              <a href="/contact" class="btn btn-primary">
-                Learn More
+              
+              <div class="mb-8">
+                <h4 class="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                  <Icon name="check_circle" style="color: #10b981;" size="20" />
+                  What's Included:
+                </h4>
+                <ul class="space-y-3">
+                  {#each classItem.features as feature}
+                    <li class="flex items-center text-gray-700">
+                      <div class="w-2 h-2 bg-gradient-to-r {colors[index]} rounded-full mr-3 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  {/each}
+                </ul>
+              </div>
+              
+              <a href="/contact" class="btn btn-primary text-lg px-8 py-4">
+                Learn More & Book
               </a>
             </div>
-          </div>
-          
-          <div class="{index % 2 === 1 ? 'lg:order-1' : ''}">
-            <div class="relative">
-              <img 
-                src={classItem.image}
-                alt={classItem.name}
-                class="rounded-2xl shadow-2xl w-full"
-              />
-              <div class="absolute -bottom-6 -right-6 bg-brand-violet text-white p-4 rounded-xl shadow-lg">
-                <p class="font-semibold text-sm">{classItem.level}</p>
+            
+            <div class="{index % 2 === 1 ? 'lg:order-1' : ''}">
+              <div class="relative group">
+                <div class="w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+                  <img 
+                    src={classItem.image}
+                    alt={classItem.name}
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-gradient-to-br {colors[index]} text-white p-4 rounded-2xl shadow-2xl">
+                  <div class="flex items-center gap-2">
+                    <Icon name="star" style="color: white;" size="20" />
+                    <p class="font-semibold">{classItem.level}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -133,83 +180,97 @@
 </section>
 
 <!-- Studio Info Section -->
-<section class="py-24 bg-gray-50">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-        Visit Our Studio
-      </h2>
-      <p class="mt-6 text-lg text-brand-gray max-w-2xl mx-auto">
+<section class="relative py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
+
+  <div class="relative z-10 mx-auto max-w-5xl px-6">
+    <div class="text-center animate-fade-in-up mb-16">
+      <h2 class="text-5xl font-bold text-gray-900 mb-8">Visit Our Studio</h2>
+      <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
         {homepage.sessions.description}
       </p>
+      <div class="mt-8">
+        <p class="text-lg text-purple-600 font-medium">
+          {homepage.sessions.callToAction}
+        </p>
+      </div>
     </div>
     
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div class="card p-8 text-center">
-        <div class="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-brand-violet to-brand-lavender flex items-center justify-center mb-6">
-          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-          </svg>
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-100/50">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+              <Icon name="location_on" style="color: white;" size="24" />
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800">OM Studio Central</p>
+              <p class="text-gray-600 text-sm">N Chelmsford, MA</p>
+            </div>
+          </div>
+          
+          <div class="hidden md:block w-px h-8 bg-gray-300"></div>
+          
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center">
+              <Icon name="schedule" style="color: white;" size="24" />
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800">Daily Classes</p>
+              <p class="text-gray-600 text-sm">Multiple sessions weekly</p>
+            </div>
+          </div>
+          
+          <div class="hidden md:block w-px h-8 bg-gray-300"></div>
+          
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+              <Icon name="group" style="color: white;" size="24" />
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800">All Levels Welcome</p>
+              <p class="text-gray-600 text-sm">Beginner to advanced</p>
+            </div>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold text-brand-black mb-4">
-          OM Studio Central
-        </h3>
-        <p class="text-brand-gray">
-          70 Princeton St, Suite 2<br>
-          N Chelmsford, MA 01863
-        </p>
-      </div>
-      
-      <div class="card p-8 text-center">
-        <div class="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-brand-sky to-brand-lavender flex items-center justify-center mb-6">
-          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-brand-black mb-4">
-          Daily Classes
-        </h3>
-        <p class="text-brand-gray">
-          Multiple sessions throughout the week with beginner-friendly options available.
-        </p>
-      </div>
-      
-      <div class="card p-8 text-center">
-        <div class="mx-auto h-16 w-16 rounded-full bg-gradient-to-br from-brand-lavender to-brand-sky flex items-center justify-center mb-6">
-          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-brand-black mb-4">
-          All Levels Welcome
-        </h3>
-        <p class="text-brand-gray">
-          Whether you're a beginner or experienced practitioner, find your perfect class level.
-        </p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA Section -->
-<section class="bg-gradient-to-r from-brand-violet to-brand-lavender py-16">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-        Ready to Begin Your Practice?
+<section class="relative py-24 bg-orange-500 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
+
+  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
+    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+      <h2 class="text-6xl font-bold mb-8 leading-tight">
+        <span class="inline-block animate-slide-up">Ready to Begin</span>
+        <span class="inline-block animate-slide-up text-purple-200" style="animation-delay: 0.3s;">Your Practice?</span>
       </h2>
-      <p class="mt-6 text-lg text-white/90 max-w-2xl mx-auto">
+    </div>
+    
+    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
         Join us at OM Studio Central and experience the transformative power of Stillness Power® practices.
       </p>
-      <div class="mt-8 flex items-center justify-center gap-x-6">
-        <a href="/contact" class="bg-white text-brand-violet hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors">
+    </div>
+    
+    <div class="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center" style="animation-delay: 0.9s;">
+      <a href="/contact" class="group bg-white text-orange-600 hover:bg-purple-100 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
+        <span class="flex items-center justify-center">
           Get Started Today
-        </a>
-        <a href="/testimonials" class="text-white hover:text-white/80 font-semibold">
-          Read Success Stories →
-        </a>
-      </div>
+          <Icon name="arrow_forward" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:translate-x-1 transition-transform duration-200" />
+        </span>
+      </a>
+      <a href="/testimonials" class="group border-3 border-white text-white font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
+        <span class="flex items-center justify-center">
+          Read Success Stories
+          <Icon name="favorite" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:scale-110 transition-transform duration-200" />
+        </span>
+      </a>
     </div>
   </div>
 </section>

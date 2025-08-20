@@ -1,8 +1,47 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
+  import Icon from '$lib/components/Icon.svelte';
   
   const { homepage } = siteContent;
   const { contact } = homepage;
+  
+  // Form data state
+  let formData = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    interest: '',
+    message: ''
+  };
+  
+  // Handle form submission
+  function handleSubmit(event: Event) {
+    event.preventDefault();
+    
+    // Build email content
+    const subject = `Stillness Power® Inquiry from ${formData.firstName} ${formData.lastName}`;
+    
+    let body = `Hello Stillness Power®,\n\n`;
+    body += `I would like to get in touch regarding your wellness programs.\n\n`;
+    body += `Contact Information:\n`;
+    body += `Name: ${formData.firstName} ${formData.lastName}\n`;
+    body += `Email: ${formData.email}\n`;
+    if (formData.phone) {
+      body += `Phone: ${formData.phone}\n`;
+    }
+    if (formData.interest) {
+      body += `Interest: ${formData.interest}\n`;
+    }
+    body += `\nMessage:\n${formData.message}\n\n`;
+    body += `Best regards,\n${formData.firstName} ${formData.lastName}`;
+    
+    // Create mailto URL
+    const mailtoUrl = `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoUrl;
+  }
 </script>
 
 <svelte:head>
@@ -11,105 +50,119 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-brand-violet/10 via-brand-lavender/5 to-brand-sky/10 py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-brand-black sm:text-5xl">
-        Contact Us
-      </h1>
-      <p class="mt-6 text-lg text-brand-gray max-w-2xl mx-auto">
-        Ready to begin your wellness journey? We'd love to hear from you and help you find the perfect class or program.
-      </p>
+<section class="relative min-h-[60vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68e2c6b7d0?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-indigo-900/80 to-blue-900/70"></div>
+
+  <div class="relative z-10 w-full">
+    <div class="mx-auto max-w-6xl px-6 text-center text-white">
+      <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          <span class="inline-block animate-slide-up" style="animation-delay: 0.3s;">Contact</span>
+          <span class="inline-block animate-slide-up text-orange-400" style="animation-delay: 0.5s;">Us</span>
+        </h1>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+        <p class="text-xl md:text-2xl mb-12 text-purple-100 font-light max-w-3xl mx-auto">
+          Ready to begin your wellness journey? We'd love to hear from you and help you find the perfect class or program.
+        </p>
+      </div>
+      
+      <div class="animate-fade-in-up" style="animation-delay: 0.9s;">
+        <a href="#contact-info" class="btn btn-primary text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+          Get In Touch
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Contact Information & Form -->
-<section class="py-24 bg-brand-white">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section id="contact-info" class="relative py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
+
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
       <!-- Contact Information -->
-      <div>
-        <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl mb-8">
+      <div class="animate-fade-in-up">
+        <h2 class="text-5xl font-bold text-gray-900 mb-8">
           Get in Touch
         </h2>
         
         <!-- Studio Info -->
-        <div class="card p-8 mb-8">
-          <div class="flex items-start mb-6">
-            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-violet to-brand-lavender flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50 mb-8">
+          <div class="flex items-start mb-8">
+            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
+              <Icon name="location_on" style="color: white;" size="32" />
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-brand-black mb-2">OM Studio Central</h3>
-              <p class="text-brand-gray">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">OM Studio Central</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
                 {contact.address}
               </p>
             </div>
           </div>
           
-          <div class="flex items-start mb-6">
-            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-sky to-brand-lavender flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-              </svg>
+          <div class="flex items-start mb-8">
+            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
+              <Icon name="phone" style="color: white;" size="32" />
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-brand-black mb-2">Phone</h3>
-              <a href="tel:{contact.phone}" class="text-brand-violet hover:text-brand-lavender transition-colors">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Phone</h3>
+              <a href="tel:{contact.phone}" class="text-purple-600 hover:text-purple-800 text-lg font-medium transition-colors">
                 {contact.phone}
               </a>
             </div>
           </div>
           
-          <div class="flex items-start mb-6">
-            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-lavender to-brand-sky flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-              </svg>
+          <div class="flex items-start mb-8">
+            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
+              <Icon name="mail" style="color: white;" size="32" />
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-brand-black mb-2">Email</h3>
-              <a href="mailto:{contact.email}" class="text-brand-violet hover:text-brand-lavender transition-colors">
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Email</h3>
+              <a href="mailto:{contact.email}" class="text-purple-600 hover:text-purple-800 text-lg font-medium transition-colors">
                 {contact.email}
               </a>
             </div>
           </div>
           
           <div class="flex items-start">
-            <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-violet to-brand-sky flex items-center justify-center mr-4 flex-shrink-0">
-              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3s-4.5 4.03-4.5 9 2.015 9 4.5 9z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3l3 3" />
-              </svg>
+            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
+              <Icon name="language" style="color: white;" size="32" />
             </div>
             <div>
-              <h3 class="text-xl font-semibold text-brand-black mb-2">Website</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">Website</h3>
               <a 
                 href={contact.website} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="text-brand-violet hover:text-brand-lavender transition-colors"
+                class="text-purple-600 hover:text-purple-800 text-lg font-medium transition-colors flex items-center gap-2"
               >
-                OMStudioCentral.com →
+                OMStudioCentral.com
+                <Icon name="open_in_new" style="color: currentColor;" size="20" />
               </a>
             </div>
           </div>
         </div>
         
         <!-- Hours Info -->
-        <div class="bg-gray-50 rounded-xl p-6">
-          <h3 class="text-lg font-semibold text-brand-black mb-4">Studio Hours</h3>
-          <p class="text-brand-gray mb-2">Daily classes available</p>
-          <p class="text-brand-gray mb-4">Please check our website for current schedule</p>
+        <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="h-16 w-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+              <Icon name="schedule" style="color: white;" size="32" />
+            </div>
+            <h3 class="text-2xl font-bold">Studio Hours</h3>
+          </div>
+          <p class="text-purple-100 mb-2 text-lg">Daily classes available</p>
+          <p class="text-purple-100 mb-6 text-lg">Please check our website for current schedule</p>
           <a 
-            href={contact.website} 
+            href="https://omstudiocentral.com/schedule-2/" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="btn btn-outline text-sm"
+            class="btn bg-white text-purple-600 hover:bg-purple-50 text-lg px-8 py-4 font-bold"
           >
             View Class Schedule
           </a>
@@ -117,71 +170,82 @@
       </div>
       
       <!-- Contact Form -->
-      <div>
-        <div class="card p-8">
-          <h2 class="text-2xl font-bold text-brand-black mb-6">Send us a Message</h2>
+      <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50">
+          <div class="text-center mb-8">
+            <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
+              <Icon name="send" style="color: white;" size="32" />
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Send us a Message</h2>
+            <p class="text-gray-700">We'll get back to you within 24 hours</p>
+          </div>
           
-          <form class="space-y-6">
+          <form class="space-y-6" on:submit={handleSubmit}>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="firstName" class="block text-sm font-medium text-brand-black mb-2">
+                <label for="firstName" class="block text-lg font-bold text-gray-900 mb-3">
                   First Name *
                 </label>
                 <input
                   type="text"
                   id="firstName"
                   name="firstName"
+                  bind:value={formData.firstName}
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent"
+                  class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
                 />
               </div>
               <div>
-                <label for="lastName" class="block text-sm font-medium text-brand-black mb-2">
+                <label for="lastName" class="block text-lg font-bold text-gray-900 mb-3">
                   Last Name *
                 </label>
                 <input
                   type="text"
                   id="lastName"
                   name="lastName"
+                  bind:value={formData.lastName}
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent"
+                  class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
                 />
               </div>
             </div>
             
             <div>
-              <label for="email" class="block text-sm font-medium text-brand-black mb-2">
+              <label for="email" class="block text-lg font-bold text-gray-900 mb-3">
                 Email Address *
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
+                bind:value={formData.email}
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent"
+                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
               />
             </div>
             
             <div>
-              <label for="phone" class="block text-sm font-medium text-brand-black mb-2">
+              <label for="phone" class="block text-lg font-bold text-gray-900 mb-3">
                 Phone Number
               </label>
               <input
                 type="tel"
                 id="phone"
                 name="phone"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent"
+                bind:value={formData.phone}
+                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
               />
             </div>
             
             <div>
-              <label for="interest" class="block text-sm font-medium text-brand-black mb-2">
+              <label for="interest" class="block text-lg font-bold text-gray-900 mb-3">
                 I'm interested in...
               </label>
               <select
                 id="interest"
                 name="interest"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent"
+                bind:value={formData.interest}
+                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
               >
                 <option value="">Select an option</option>
                 <option value="traditional">Traditional Classes</option>
@@ -194,22 +258,23 @@
             </div>
             
             <div>
-              <label for="message" class="block text-sm font-medium text-brand-black mb-2">
+              <label for="message" class="block text-lg font-bold text-gray-900 mb-3">
                 Message *
               </label>
               <textarea
                 id="message"
                 name="message"
-                rows="5"
+                rows="6"
+                bind:value={formData.message}
                 required
                 placeholder="Tell us about your wellness goals or any questions you have..."
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-violet focus:border-transparent resize-vertical"
+                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-vertical text-lg"
               ></textarea>
             </div>
             
             <button
               type="submit"
-              class="btn btn-primary w-full text-lg py-4"
+              class="btn btn-primary w-full text-xl py-5 font-bold"
             >
               Send Message
             </button>
@@ -221,30 +286,41 @@
 </section>
 
 <!-- Map Section -->
-<section class="py-24 bg-gray-50">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-        Find Us
-      </h2>
-      <p class="mt-6 text-lg text-brand-gray">
-        Located in the heart of North Chelmsford, Massachusetts
+<section class="relative py-24 bg-indigo-600 text-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-20"></div>
+  
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-5xl font-bold mb-6">Find Us</h2>
+      <p class="text-xl text-indigo-200 max-w-3xl mx-auto">
+        Located in the heart of North Chelmsford, Massachusetts at OM Studio Central
       </p>
     </div>
     
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div class="aspect-video bg-gray-200 flex items-center justify-center">
-        <div class="text-center">
-          <svg class="h-16 w-16 text-brand-violet mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-          </svg>
-          <p class="text-brand-gray">
-            Interactive map would be embedded here
-          </p>
-          <p class="text-sm text-brand-gray mt-2">
-            70 Princeton St, Suite 2, N Chelmsford, MA 01863
-          </p>
+    <div class="animate-fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20" style="animation-delay: 0.3s;">
+      <div class="aspect-video relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.123456789!2d-71.3678123!3d42.6345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e39eb123456789%3A0x123456789abcdef0!2s70%20Princeton%20St%20Suite%202%2C%20North%20Chelmsford%2C%20MA%2001863!5e0!3m2!1sen!2sus!4v1693824000000!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="OM Studio Central Location - 70 Princeton St, Suite 2, North Chelmsford, MA"
+          class="rounded-3xl"
+        ></iframe>
+        <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <Icon name="location_on" style="color: white;" size="20" />
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">OM Studio Central</h4>
+              <p class="text-gray-600 text-sm">70 Princeton St, Suite 2</p>
+              <p class="text-gray-600 text-sm">N Chelmsford, MA 01863</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -252,50 +328,61 @@
 </section>
 
 <!-- FAQ Section -->
-<section class="py-24 bg-brand-white">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold tracking-tight text-brand-black sm:text-4xl">
-        Frequently Asked Questions
+<section class="relative py-24 bg-orange-500 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
+
+  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
+    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
+      <h2 class="text-6xl font-bold mb-8 leading-tight">
+        <span class="inline-block animate-slide-up">Frequently Asked</span>
+        <span class="inline-block animate-slide-up text-purple-200" style="animation-delay: 0.3s;">Questions</span>
       </h2>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="card p-6">
-        <h3 class="text-lg font-semibold text-brand-black mb-3">
-          Do I need experience to join classes?
-        </h3>
-        <p class="text-brand-gray">
-          Not at all! All levels are welcome. We offer basic classes specifically designed to help beginners find confidence and get to know their body.
-        </p>
-      </div>
-      
-      <div class="card p-6">
-        <h3 class="text-lg font-semibold text-brand-black mb-3">
-          What should I bring to class?
-        </h3>
-        <p class="text-brand-gray">
-          Just bring yourself and comfortable clothing. We provide all necessary equipment including mats, props, and any aerial equipment needed.
-        </p>
-      </div>
-      
-      <div class="card p-6">
-        <h3 class="text-lg font-semibold text-brand-black mb-3">
-          Are there virtual class options?
-        </h3>
-        <p class="text-brand-gray">
-          Yes! We offer interactive virtual sessions that bring our holistic wellness practices directly to your home with personalized guidance.
-        </p>
-      </div>
-      
-      <div class="card p-6">
-        <h3 class="text-lg font-semibold text-brand-black mb-3">
-          Can you accommodate physical limitations?
-        </h3>
-        <p class="text-brand-gray">
-          Absolutely. Our instructors are experienced in adapting practices for various physical needs, including chair-based modifications when necessary.
-        </p>
-      </div>
+    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
+      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
+        Everything you need to know about starting your wellness journey with us.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+      {#each [
+        { 
+          question: 'Do I need experience to join classes?', 
+          answer: 'Not at all! All levels are welcome. We offer basic classes specifically designed to help beginners find confidence and get to know their body.',
+          icon: 'help'
+        },
+        { 
+          question: 'What should I bring to class?', 
+          answer: 'Just bring yourself and comfortable clothing. We provide all necessary equipment including mats, props, and any aerial equipment needed.',
+          icon: 'luggage'
+        },
+        { 
+          question: 'Are there virtual class options?', 
+          answer: 'Yes! We offer interactive virtual sessions that bring our holistic wellness practices directly to your home with personalized guidance.',
+          icon: 'videocam'
+        },
+        { 
+          question: 'Can you accommodate physical limitations?', 
+          answer: 'Absolutely. Our instructors are experienced in adapting practices for various physical needs, including chair-based modifications when necessary.',
+          icon: 'accessibility'
+        }
+      ] as faq, index}
+        <div class="animate-fade-in-up bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-orange-200/50" style="animation-delay: {(index + 1) * 0.2}s;">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl">
+              <Icon name="{faq.icon}" style="color: white;" size="24" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 text-left">
+              {faq.question}
+            </h3>
+          </div>
+          <p class="text-gray-700 text-lg leading-relaxed text-left">
+            {faq.answer}
+          </p>
+        </div>
+      {/each}
     </div>
   </div>
 </section>

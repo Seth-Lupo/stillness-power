@@ -58,7 +58,7 @@ export const siteContent = {
       description: "We also partner with NON PROFIT organizations to deliver our \"Whole Being fitness\" programs tailored to yours members and non members, including onetime seminar/workshop and sustainable longterm programs."
     },
     contact: {
-      title: "Call 978.272.1339 To Discuss Terms and Conditions.",
+      title: "Call (978) 272-1339 To Discuss Terms and Conditions.",
       lookFor: "Look for our Luminous Logo where our Programs are offered."
     }
   },
