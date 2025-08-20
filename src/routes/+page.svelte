@@ -1,6 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import { asset } from '$lib/utils/paths';
   
   const { homepage } = siteContent;
 </script>
@@ -97,7 +98,7 @@
           <div class="text-center mb-8">
             <div class="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-purple-200 shadow-lg">
               <img 
-                src="/images/sanjyot.jpg" 
+                src={asset("/images/sanjyot.jpg")} 
                 alt="Sanjyot Lupo" 
                 class="w-full h-full object-cover"
               />

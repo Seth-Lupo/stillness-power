@@ -2,6 +2,8 @@
   import { navigation } from '$lib/data/content';
   import { page } from '$app/stores';
   import Icon from '$lib/components/Icon.svelte';
+  import { asset } from '$lib/utils/paths';
+  import { base } from '$app/paths';
   
   let { mobileMenuOpen = $bindable(false) } = $props();
 </script>
@@ -10,10 +12,10 @@
   <nav class="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
     <div class="flex w-full items-center justify-between py-4">
       <div class="flex items-center">
-        <a href="/" class="flex items-center space-x-3">
+        <a href="{base}/" class="flex items-center space-x-3">
           <img
             class="h-12 w-auto"
-            src="/images/logo.png"
+            src={asset("/images/logo.png")}
             alt="Stillness Power"
           />
           <span class="text-xl font-bold text-purple-600">
@@ -27,9 +29,9 @@
         <div class="flex items-center space-x-8">
           {#each navigation as item}
             <a
-              href={item.href}
+              href="{base}{item.href}"
               class="text-sm font-medium transition-colors hover:text-purple-600
-                     {$page.url.pathname === item.href 
+                     {$page.url.pathname === `${base}${item.href}` 
                        ? 'text-purple-600 border-b-2 border-purple-600' 
                        : 'text-gray-700'}"
             >
@@ -38,7 +40,7 @@
           {/each}
           
           <a
-            href="/contact"
+            href="{base}/contact"
             class="btn btn-primary ml-4"
           >
             Get Started
@@ -70,9 +72,9 @@
         <div class="space-y-1 pb-4 pt-2">
           {#each navigation as item}
             <a
-              href={item.href}
+              href="{base}{item.href}"
               class="block px-3 py-2 text-base font-medium transition-colors hover:text-brand-violet hover:bg-gray-50 rounded-md
-                     {$page.url.pathname === item.href 
+                     {$page.url.pathname === `${base}${item.href}` 
                        ? 'text-brand-violet bg-brand-violet/10' 
                        : 'text-brand-black'}"
               onclick={() => mobileMenuOpen = false}
@@ -83,7 +85,7 @@
           
           <div class="px-3 py-2">
             <a
-              href="/contact"
+              href="{base}/contact"
               class="btn btn-primary w-full text-center"
               onclick={() => mobileMenuOpen = false}
             >

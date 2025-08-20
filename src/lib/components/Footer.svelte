@@ -2,6 +2,7 @@
   import { socialLinks } from '$lib/data/content';
   import Icon from './Icon.svelte';
   import SocialIcon from './SocialIcon.svelte';
+  import { asset } from '$lib/utils/paths';
 </script>
 
 <footer class="bg-gray-900 text-white">
@@ -12,7 +13,7 @@
         <div class="flex items-center space-x-3 mb-4">
           <img
             class="h-10 w-auto"
-            src="/images/logo.png"
+            src={asset("/images/logo.png")}
             alt="Stillness Power"
           />
           <span class="text-lg font-headline text-white font-bold">
