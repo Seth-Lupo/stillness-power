@@ -87,82 +87,82 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
       <!-- Contact Information -->
       <div class="animate-fade-in-up">
-        <h2 class="text-5xl font-bold text-gray-900 mb-8">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">
           Get in Touch
         </h2>
         
         <!-- Studio Info -->
-        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50 mb-8">
-          <div class="flex items-start mb-8">
-            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
-              <Icon name="location_on" style="color: white;" size="32" />
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-purple-100/50 mb-6">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <Icon name="location_on" style="color: white;" size="20" />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">OM Studio Central</h3>
+                <p class="text-gray-700 text-sm">{contact.address}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">OM Studio Central</h3>
-              <p class="text-gray-700 text-lg leading-relaxed">
-                {contact.address}
-              </p>
+            
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <Icon name="phone" style="color: white;" size="20" />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Phone</h3>
+                <a href="tel:{contact.phone}" class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
+                  {contact.phone}
+                </a>
+              </div>
             </div>
-          </div>
-          
-          <div class="flex items-start mb-8">
-            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
-              <Icon name="phone" style="color: white;" size="32" />
+            
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <Icon name="mail" style="color: white;" size="20" />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Email</h3>
+                <a href="mailto:{contact.email}" class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
+                  {contact.email}
+                </a>
+              </div>
             </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">Phone</h3>
-              <a href="tel:{contact.phone}" class="text-purple-600 hover:text-purple-800 text-lg font-medium transition-colors">
-                {contact.phone}
-              </a>
-            </div>
-          </div>
-          
-          <div class="flex items-start mb-8">
-            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
-              <Icon name="mail" style="color: white;" size="32" />
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">Email</h3>
-              <a href="mailto:{contact.email}" class="text-purple-600 hover:text-purple-800 text-lg font-medium transition-colors">
-                {contact.email}
-              </a>
-            </div>
-          </div>
-          
-          <div class="flex items-start">
-            <div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mr-6 flex-shrink-0 shadow-xl">
-              <Icon name="language" style="color: white;" size="32" />
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">Website</h3>
-              <a 
-                href={contact.website} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="text-purple-600 hover:text-purple-800 text-lg font-medium transition-colors flex items-center gap-2"
-              >
-                OMStudioCentral.com
-                <Icon name="open_in_new" style="color: currentColor;" size="20" />
-              </a>
+            
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <Icon name="language" style="color: white;" size="20" />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Website</h3>
+                <a 
+                  href={contact.website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors flex items-center gap-1"
+                >
+                  OMStudioCentral.com
+                  <Icon name="open_in_new" style="color: currentColor;" size="14" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
         
         <!-- Hours Info -->
-        <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="h-16 w-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <Icon name="schedule" style="color: white;" size="32" />
+        <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl p-6 text-white shadow-xl">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="h-10 w-10 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+              <Icon name="schedule" style="color: white;" size="20" />
             </div>
-            <h3 class="text-2xl font-bold">Studio Hours</h3>
+            <h3 class="text-lg font-bold">Studio Hours</h3>
           </div>
-          <p class="text-purple-100 mb-2 text-lg">Daily classes available</p>
-          <p class="text-purple-100 mb-6 text-lg">Please check our website for current schedule</p>
+          <p class="text-purple-100 text-sm mb-1">Daily classes available</p>
+          <p class="text-purple-100 text-sm mb-4">Check website for current schedule</p>
           <a 
             href="https://omstudiocentral.com/schedule-2/" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="btn bg-white text-purple-600 hover:bg-purple-50 text-lg px-8 py-4 font-bold"
+            class="btn bg-white text-purple-600 hover:bg-purple-50 text-sm px-6 py-3 font-bold"
           >
             View Class Schedule
           </a>
@@ -171,19 +171,19 @@
       
       <!-- Contact Form -->
       <div class="animate-fade-in-up" style="animation-delay: 0.3s;">
-        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-purple-100/50">
-          <div class="text-center mb-8">
-            <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
-              <Icon name="send" style="color: white;" size="32" />
+        <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-purple-100/50">
+          <div class="text-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+              <Icon name="send" style="color: white;" size="20" />
             </div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">Send us a Message</h2>
-            <p class="text-gray-700">We'll get back to you within 24 hours</p>
+            <h2 class="text-xl font-bold text-gray-900 mb-1">Send us a Message</h2>
+            <p class="text-gray-700 text-sm">We'll get back to you within 24 hours</p>
           </div>
           
-          <form class="space-y-6" on:submit={handleSubmit}>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form class="space-y-4" on:submit={handleSubmit}>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label for="firstName" class="block text-lg font-bold text-gray-900 mb-3">
+                <label for="firstName" class="block text-sm font-bold text-gray-900 mb-2">
                   First Name *
                 </label>
                 <input
@@ -192,11 +192,11 @@
                   name="firstName"
                   bind:value={formData.firstName}
                   required
-                  class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
               <div>
-                <label for="lastName" class="block text-lg font-bold text-gray-900 mb-3">
+                <label for="lastName" class="block text-sm font-bold text-gray-900 mb-2">
                   Last Name *
                 </label>
                 <input
@@ -205,13 +205,13 @@
                   name="lastName"
                   bind:value={formData.lastName}
                   required
-                  class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
             </div>
             
             <div>
-              <label for="email" class="block text-lg font-bold text-gray-900 mb-3">
+              <label for="email" class="block text-sm font-bold text-gray-900 mb-2">
                 Email Address *
               </label>
               <input
@@ -220,12 +220,12 @@
                 name="email"
                 bind:value={formData.email}
                 required
-                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             
             <div>
-              <label for="phone" class="block text-lg font-bold text-gray-900 mb-3">
+              <label for="phone" class="block text-sm font-bold text-gray-900 mb-2">
                 Phone Number
               </label>
               <input
@@ -233,19 +233,19 @@
                 id="phone"
                 name="phone"
                 bind:value={formData.phone}
-                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
             
             <div>
-              <label for="interest" class="block text-lg font-bold text-gray-900 mb-3">
+              <label for="interest" class="block text-sm font-bold text-gray-900 mb-2">
                 I'm interested in...
               </label>
               <select
                 id="interest"
                 name="interest"
                 bind:value={formData.interest}
-                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
                 <option value="">Select an option</option>
                 <option value="traditional">Traditional Classes</option>
@@ -258,23 +258,23 @@
             </div>
             
             <div>
-              <label for="message" class="block text-lg font-bold text-gray-900 mb-3">
+              <label for="message" class="block text-sm font-bold text-gray-900 mb-2">
                 Message *
               </label>
               <textarea
                 id="message"
                 name="message"
-                rows="6"
+                rows="4"
                 bind:value={formData.message}
                 required
                 placeholder="Tell us about your wellness goals or any questions you have..."
-                class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-vertical text-lg"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-vertical"
               ></textarea>
             </div>
             
             <button
               type="submit"
-              class="btn btn-primary w-full text-xl py-5 font-bold"
+              class="btn btn-primary w-full text-lg py-4 font-bold"
             >
               Send Message
             </button>
