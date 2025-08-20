@@ -214,43 +214,82 @@
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="relative py-24 bg-orange-500 overflow-hidden">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
+<!-- Partnership Timeline Section -->
+<section class="relative py-24 bg-gray-50 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
 
-  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
-    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-      <h2 class="text-6xl font-bold mb-8 leading-tight">
-        <span class="inline-block animate-slide-up">{partners.contact.title}</span>
-      </h2>
-    </div>
-    
-    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
-      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
-        {partners.contact.lookFor}
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">Partnership Success Timeline</h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        See how quickly your organization can start benefiting from our wellness programs
       </p>
     </div>
     
-    <div class="animate-fade-in-up max-w-md mx-auto" style="animation-delay: 0.9s;">
-      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-orange-200/50">
-        <div class="text-center mb-8">
-          <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
-            <Icon name="phone" style="color: white;" size="32" />
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-purple-400 via-blue-400 to-green-400"></div>
+      
+      <div class="space-y-12">
+        <!-- Week 1 -->
+        <div class="relative flex items-center">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-purple-100">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Initial Consultation</h3>
+              <p class="text-gray-600">Schedule your needs assessment call</p>
+            </div>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Ready to Partner?</h3>
-          <p class="text-gray-700">Call us to discuss terms and conditions</p>
+          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center relative z-10 shadow-lg">
+            <span class="text-white font-bold">1</span>
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="text-purple-600 font-semibold">Week 1</div>
+          </div>
         </div>
         
-        <div class="space-y-4">
-          <a 
-            href="tel:+19782721339" 
-            class="btn bg-orange-500 text-white hover:bg-orange-600 w-full text-xl py-4 font-bold"
-          >
-            (978) 272-1339
+        <!-- Week 2-3 -->
+        <div class="relative flex items-center">
+          <div class="flex-1 pr-8 text-right">
+            <div class="text-blue-600 font-semibold">Weeks 2-3</div>
+          </div>
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center relative z-10 shadow-lg">
+            <span class="text-white font-bold">2</span>
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-blue-100">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Program Design</h3>
+              <p class="text-gray-600">Custom program creation and scheduling</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Week 4 -->
+        <div class="relative flex items-center">
+          <div class="flex-1 pr-8 text-right">
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-green-100">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Program Launch</h3>
+              <p class="text-gray-600">First wellness sessions begin!</p>
+            </div>
+          </div>
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center relative z-10 shadow-lg">
+            <span class="text-white font-bold">3</span>
+          </div>
+          <div class="flex-1 pl-8">
+            <div class="text-green-600 font-semibold">Week 4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-16">
+      <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-3xl p-8 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4">Start Your Partnership Journey</h3>
+        <p class="mb-6 text-purple-100">Ready to bring wellness to your organization?</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+19782721339" class="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-3 rounded-lg transition-colors">
+            📞 (978) 272-1339
           </a>
-          
-          <a href="/contact" class="btn border-2 border-orange-500 text-orange-600 hover:bg-orange-50 w-full py-4">
+          <a href="/contact" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-3 rounded-lg transition-colors">
             Contact Form
           </a>
         </div>

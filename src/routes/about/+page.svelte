@@ -143,71 +143,47 @@
   </div>
 </section>
 
-<!-- Values Section -->
-<section class="relative py-24 bg-indigo-600 text-white overflow-hidden">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-20"></div>
+<!-- CTA Section -->
+<section class="relative py-24 bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1528319725582-ddc096101511?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-30"></div>
   
   <div class="relative z-10 mx-auto max-w-6xl px-6">
-    <div class="text-center mb-16 animate-fade-in-up">
-      <h2 class="text-5xl font-bold mb-6">Our Core Values</h2>
-      <p class="text-xl text-indigo-200 max-w-3xl mx-auto">
-        The principles that guide our approach to holistic wellness and community building.
-      </p>
-    </div>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      {#each [
-        { icon: 'favorite', title: 'Holistic Wellness', description: 'We believe in treating the whole person - mind, body, and spirit - through integrated practices.', color: 'from-purple-500 to-pink-500' },
-        { icon: 'group', title: 'Community Focus', description: 'Building supportive communities where everyone can grow and heal together on their wellness journey.', color: 'from-blue-500 to-indigo-600' },
-        { icon: 'school', title: 'Accessible Learning', description: 'Making wellness practices simple, easy, and accessible to people of all backgrounds and abilities.', color: 'from-orange-500 to-red-500' }
-      ] as value, index}
-        <div class="group animate-slide-up bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105" style="animation-delay: {index * 0.2}s;">
-          <div class="bg-gradient-to-br {value.color} w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-all duration-300 shadow-xl">
-            <Icon name="{value.icon}" style="color: white;" size="40" />
+    <div class="bg-white/95 backdrop-blur-lg rounded-3xl p-12 shadow-2xl">
+      <div class="text-center">
+        <h2 class="text-5xl font-bold text-gray-900 mb-6">
+          Begin Your Journey Today
+        </h2>
+        <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Experience the transformative power of Stillness Power® practices in a supportive, welcoming environment guided by Sanjyot's expertise.
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+          <div class="text-center p-6">
+            <div class="text-4xl mb-3">🧘‍♀️</div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">Expert Guidance</h3>
+            <p class="text-gray-600">20,000+ hours of teaching experience</p>
           </div>
-          <h3 class="text-2xl font-bold mb-4">{value.title}</h3>
-          <p class="text-indigo-200 text-lg leading-relaxed">{value.description}</p>
-          <div class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div class="w-full h-1 bg-gradient-to-r {value.color} rounded-full"></div>
+          <div class="text-center p-6">
+            <div class="text-4xl mb-3">💝</div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">All Levels Welcome</h3>
+            <p class="text-gray-600">From complete beginners to advanced</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="text-4xl mb-3">✨</div>
+            <h3 class="font-bold text-lg text-gray-900 mb-2">Proven Results</h3>
+            <p class="text-gray-600">Real transformations since 2011</p>
           </div>
         </div>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section class="relative py-24 bg-orange-500 overflow-hidden">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
-
-  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
-    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-      <h2 class="text-6xl font-bold mb-8 leading-tight">
-        <span class="inline-block animate-slide-up">Join Our</span>
-        <span class="inline-block animate-slide-up text-purple-200" style="animation-delay: 0.3s;">Wellness Community</span>
-      </h2>
-    </div>
-    
-    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
-      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
-        Experience the transformative power of Stillness Power® practices in a supportive, welcoming environment.
-      </p>
-    </div>
-    
-    <div class="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center" style="animation-delay: 0.9s;">
-      <a href="/classes" class="group bg-white text-orange-600 hover:bg-purple-100 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
-        <span class="flex items-center justify-center">
-          View Our Classes
-          <Icon name="arrow_forward" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:translate-x-1 transition-transform duration-200" />
-        </span>
-      </a>
-      <a href="/contact" class="group border-3 border-white text-white font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
-        <span class="flex items-center justify-center">
-          Connect With Us
-          <Icon name="favorite" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:scale-110 transition-transform duration-200" />
-        </span>
-      </a>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/classes" class="bg-purple-600 text-white hover:bg-purple-700 font-bold text-lg px-8 py-4 rounded-xl transition-colors">
+            Explore Classes
+          </a>
+          <a href="/contact" class="bg-gray-100 text-purple-600 hover:bg-gray-200 font-bold text-lg px-8 py-4 rounded-xl transition-colors">
+            Get in Touch
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

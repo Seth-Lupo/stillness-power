@@ -239,38 +239,51 @@
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="relative py-24 bg-orange-500 overflow-hidden">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
-
-  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
-    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-      <h2 class="text-6xl font-bold mb-8 leading-tight">
-        <span class="inline-block animate-slide-up">Ready to Begin</span>
-        <span class="inline-block animate-slide-up text-purple-200" style="animation-delay: 0.3s;">Your Practice?</span>
-      </h2>
+<!-- Getting Started Guide -->
+<section class="py-24 bg-white">
+  <div class="mx-auto max-w-4xl px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">Your First Class</h2>
+      <p class="text-xl text-gray-700">Everything you need to know to get started with confidence</p>
     </div>
     
-    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
-      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
-        Join us at OM Studio Central and experience the transformative power of Stillness Power® practices.
-      </p>
+    <div class="space-y-8">
+      <div class="flex items-start gap-6 p-6 bg-purple-50 rounded-2xl">
+        <div class="flex-shrink-0 w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Choose Your Class</h3>
+          <p class="text-gray-700">Start with Traditional classes if you're new to practice, or try Aerial for a unique experience. Virtual sessions are perfect for busy schedules.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-start gap-6 p-6 bg-blue-50 rounded-2xl">
+        <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">What to Bring</h3>
+          <p class="text-gray-700">Just yourself and comfortable clothing! We provide all mats, props, and equipment. Come hydrated and ready to relax.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-start gap-6 p-6 bg-green-50 rounded-2xl">
+        <div class="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Arrive Early</h3>
+          <p class="text-gray-700">Plan to arrive 10-15 minutes before class starts. This gives you time to settle in and chat with Sanjyot about any questions or concerns.</p>
+        </div>
+      </div>
     </div>
     
-    <div class="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center" style="animation-delay: 0.9s;">
-      <a href="/contact" class="group bg-white text-orange-600 hover:bg-purple-100 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
-        <span class="flex items-center justify-center">
-          Get Started Today
-          <Icon name="arrow_forward" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:translate-x-1 transition-transform duration-200" />
-        </span>
-      </a>
-      <a href="/testimonials" class="group border-3 border-white text-white font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
-        <span class="flex items-center justify-center">
-          Read Success Stories
-          <Icon name="favorite" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:scale-110 transition-transform duration-200" />
-        </span>
-      </a>
+    <div class="text-center mt-12 p-8 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-2xl">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Start?</h3>
+      <p class="text-gray-700 mb-6">Contact us to book your first class or ask any questions</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-purple-600 text-white hover:bg-purple-700 font-semibold px-8 py-3 rounded-lg transition-colors">
+          Book Your First Class
+        </a>
+        <a href="https://omstudiocentral.com/schedule-2/" target="_blank" class="bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-50 font-semibold px-8 py-3 rounded-lg transition-colors">
+          View Schedule
+        </a>
+      </div>
     </div>
   </div>
 </section>

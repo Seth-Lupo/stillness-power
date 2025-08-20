@@ -140,38 +140,96 @@
   </div>
 </section>
 
-<!-- Contact CTA -->
-<section class="relative py-24 bg-orange-500 overflow-hidden">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-10"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-orange-500 via-red-500 to-orange-600"></div>
-
-  <div class="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
-    <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
-      <h2 class="text-6xl font-bold mb-8 leading-tight">
-        <span class="inline-block animate-slide-up">Ready to</span>
-        <span class="inline-block animate-slide-up text-purple-200" style="animation-delay: 0.3s;">Begin?</span>
-      </h2>
-    </div>
-    
-    <div class="animate-fade-in-up" style="animation-delay: 0.6s;">
-      <p class="text-2xl mb-12 text-orange-100 font-light max-w-3xl mx-auto">
-        Connect with us to learn more about our wellness practices and find the perfect program for your journey.
-      </p>
-    </div>
-    
-    <div class="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center" style="animation-delay: 0.9s;">
-      <a href="/contact" class="group bg-white text-orange-600 hover:bg-purple-100 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
-        <span class="flex items-center justify-center">
-          Contact Us
-          <Icon name="arrow_forward" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:translate-x-1 transition-transform duration-200" />
-        </span>
-      </a>
-      <a href="/classes" class="group border-3 border-white text-white font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
-        <span class="flex items-center justify-center">
-          View Classes
-          <Icon name="favorite" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:scale-110 transition-transform duration-200" />
-        </span>
-      </a>
+<!-- Newsletter & Community Section -->
+<section class="relative py-24 bg-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
+  
+  <div class="relative z-10 mx-auto max-w-4xl px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Community Stats -->
+      <div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Join Our Wellness Community</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Connect with like-minded individuals on a journey of self-discovery and holistic wellness.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-xl">500+</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900">Students Transformed</h3>
+              <p class="text-gray-600">Since 2011</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-xl">10+</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900">Years of Experience</h3>
+              <p class="text-gray-600">Proven practices</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-xl">3</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900">Class Types</h3>
+              <p class="text-gray-600">Traditional, Aerial, Virtual</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Next Steps Card -->
+      <div>
+        <div class="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-3xl p-8 border border-purple-200">
+          <div class="text-center mb-6">
+            <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Icon name="spa" style="color: white;" size="32" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Ready for Your First Class?</h3>
+            <p class="text-gray-700">Take the next step in your wellness journey</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+              <div class="flex items-center gap-3">
+                <span class="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                <span class="text-gray-800">Browse our class offerings</span>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+              <div class="flex items-center gap-3">
+                <span class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                <span class="text-gray-800">Contact us with questions</span>
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+              <div class="flex items-center gap-3">
+                <span class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                <span class="text-gray-800">Book your first session</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex flex-col gap-3 mt-8">
+            <a href="/classes" class="bg-purple-600 text-white hover:bg-purple-700 font-bold py-3 px-6 rounded-lg text-center transition-colors">
+              View Classes
+            </a>
+            <a href="/contact" class="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-bold py-3 px-6 rounded-lg text-center transition-colors">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
