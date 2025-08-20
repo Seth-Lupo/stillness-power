@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<!-- Blog Posts Grid -->   
+<!-- Blog Posts Grid -->    
 <section id="articles" class="relative py-24 bg-white overflow-hidden">
   <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center opacity-5"></div>
   <div class="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
