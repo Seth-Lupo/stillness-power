@@ -45,7 +45,7 @@
       ],
       duration: "45-60 minutes",
       level: "All levels welcome", 
-      image: "/images/om-40.jpg"
+      image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&h=400&fit=crop&auto=format"
     }
   ];
 </script>

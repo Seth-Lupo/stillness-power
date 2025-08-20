@@ -44,9 +44,9 @@ export const siteContent = {
     title: "Leadership & team",
     founder: {
       name: "Sanjyot Lupo",
-      title: "Creator of Stillness Power",
-      quote: "Soul can be neither created nor destroyed, it takes only different forms. So take the time to honor the indestructible and get to know it when you can",
-      bio: "Sanjyot is a dedicated practitioner and teacher committed to bringing holistic wellness to communities through meditative and prayerful practices."
+      title: "Creator & Master Coach of Stillness Power®",
+      quote: "The PROOF is in the PRACTICE!",
+      bio: "Sanjyot is a certified yoga instructor with specialized expertise in Breath Control, Meditation & Stress Management practices. With over 500 hours of teaching experience since 2011, she brings both scientific understanding and deep spiritual wisdom to her practice. Known for her enthusiastic, fun and extremely committed approach, Sanjyot guides students to discover new, deeper and more functionally effective ways of breathing while finding peacefulness and releasing negativity."
     }
   },
 
@@ -65,22 +65,34 @@ export const siteContent = {
 
   testimonials: [
     {
-      text: "Yoga seems such a weak term for these classes! Yes you move your body and break a sweat and find your limitations (and are repeatedly -thankfully- encouraged to honor and be gentle with those limitations). But this process of being lead to going deep within yourself to hear your own body's wisdom, find peacefulness, release negativity and open up to healing, and to discover new, deeper and more functionally effective ways of breathing- these aspects are quite unique from any other yoga, exercise or meditation classes I have taken. Throw in a little belly dancing and the resulting recipe is a nurturing, healing, life-extending and expanding experience I would highly recommend to anyone of any ability.",
-      author: "Julie"
+      text: "It was only after I started Yoga with Sanjyot that I realized how wonderfully stimulating it can be. Sanjyot is very enthusiastic, fun and extremely committed. I always come out of the class relaxed and at the same time feeling strong. I now have the confidence to recommend yoga to my patients who suffer from chronic illnesses.",
+      author: "Dr. Guddetti, NH"
     },
     {
-      text: "Having my share of Medical problems (cancer survivor) & weight issues i tend to shy away from a lot of classes. when i went to my first shine on class i was very impressed as i loved the mixture of yoga,breathing,streching,concentration and bliss. i am learning to relax and do things that help my body. I feel great whenever i leave my shine on class. Sanjyot's positive energy helps keep me inspired to do better each week.",
-      author: "Doris"
+      text: "Yoga seems such a weak term for these classes! This process of being lead to going deep within yourself to hear your own body's wisdom, find peacefulness, release negativity and open up to healing, and to discover new, deeper and more functionally effective ways of breathing - these aspects are quite unique from any other yoga classes I have taken.",
+      author: "Julie, Billerica, MA"
     },
     {
-      text: "I look forward to our weekly get togethers. The breathing, relaxing and stretching techniques learned and practiced are important parts of my personal life long health plan and give perspective to living life",
-      author: "Doug"
+      text: "When I talk to people about yoga, they don't have the same experience that I do. My yoga with Stillness Power extends to my mind and inner health. Stillness Power incorporates the entire package! It has truly saved me from depression symptoms.",
+      author: "Cindylee, Littleton, MA"
+    },
+    {
+      text: "I have never before experienced such a peaceful and healthy feeling as I do in your class. Your approach to yoga, breath, and meditation has profoundly affected my practice. I always come away filled with blissful, healing energy.",
+      author: "Dennis, Westford, MA"
+    },
+    {
+      text: "Your class has helped me go from a depressed state due to muscle injuries to a blissful state. Attending your classes, doing the breathing and movements have helped me get to a better place in my life.",
+      author: "Ann, Groton, MA"
+    },
+    {
+      text: "Having my share of medical problems (cancer survivor) & weight issues, I loved the mixture of yoga, breathing, stretching, concentration and bliss. Sanjyot's positive energy helps keep me inspired to do better each week.",
+      author: "Doris Landry, Townsend, MA"
     }
   ],
 
   blog: {
-    title: "Stillness Power Blog",
-    description: "Insights and wisdom on the path to holistic wellness"
+    title: "Spiritual Teachings & Yoga Wisdom",
+    description: "Sacred insights and practical guidance from Sanjyot's years of teaching meditation, breathwork, and the transformative path of Stillness Power® practice"
   }
 };
 

@@ -164,7 +164,7 @@
             <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
               <span class="text-white text-sm">✓</span>
             </div>
-            <span class="text-purple-100">Expert guidance from Sanjyot's 500+ hours of experience</span>
+            <span class="text-purple-100">Expert guidance from Sanjyot's 20000+ hours of experience</span>
           </div>
           <div class="flex items-center gap-3">
             <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
