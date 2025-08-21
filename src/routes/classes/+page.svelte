@@ -1,7 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
-  import { url } from '$lib/utils/paths';
+   import { asset} from '$lib/utils/paths';
   
   const { homepage } = siteContent;
   
@@ -160,7 +160,7 @@
               <div class="relative group">
                 <div class="w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                   <img 
-                    src={classItem.image}
+                    src={asset(classItem.image)}
                     alt={classItem.name}
                     class="w-full h-full object-cover"
                   />
