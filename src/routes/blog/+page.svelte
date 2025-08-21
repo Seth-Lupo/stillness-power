@@ -8,6 +8,7 @@
   const blogPosts = [
     {
       id: 1,
+      slug: "sacred-practice-of-breathing",
       title: "The Sacred Practice of Breathing",
       excerpt: "\"Oh, Eternal One, my breath being Yours, teach me to inhale and exhale with the same Bliss, so I can truly accept the duality in this earthly life.\" Discover how conscious breathing connects us to divine stillness.",
       date: "2012-10-26",
@@ -17,6 +18,7 @@
     },
     {
       id: 2,
+      slug: "meditation-undoing-monkey-mind",
       title: "Meditation: Undoing the Mischief of the Monkey Mind",
       excerpt: "MEDITATE and UNDO the MISCHIEF done by the MONKEY MIND. Learn practical techniques to quiet mental chatter and find your inner stillness through dedicated practice.",
       date: "2013-01-21",
@@ -26,6 +28,7 @@
     },
     {
       id: 3,
+      slug: "finding-light-within-spiritual-path",
       title: "Finding Light Within: The Spiritual Path",
       excerpt: "\"Lord, always keep me in Your Light so I don't drift away.\" Explore how yoga practice becomes a spiritual journey of connection and divine guidance.",
       date: "2012-08-24",
@@ -35,6 +38,7 @@
     },
     {
       id: 4,
+      slug: "listening-to-natures-whispers",
       title: "Listening to Nature's Whispers",
       excerpt: "\"Whispers of Nature can be heard only by a Blissful Heart.\" How mindfulness practice opens our awareness to the subtle teachings around us every day.",
       date: "2012-10-14",
@@ -44,6 +48,7 @@
     },
     {
       id: 5,
+      slug: "discovering-ocean-within",
       title: "Discovering the Ocean Within",
       excerpt: "\"Lord, in the littlest there is an Ocean of You to be Discovered.\" Every small moment holds infinite possibility for spiritual awakening and self-realization.",
       date: "2012-08-12",
@@ -53,6 +58,7 @@
     },
     {
       id: 6,
+      slug: "proof-is-in-practice",
       title: "The Proof is in the Practice",
       excerpt: "Why consistent, devoted practice is the key to experiencing real transformation. Learn how discipline and dedication unlock the true benefits of Stillness Power® teachings.",
       date: "2012-06-10",
@@ -114,7 +120,7 @@
       {#each blogPosts as post, index}
         {@const colors = ['from-purple-500 to-pink-500', 'from-blue-500 to-indigo-600', 'from-orange-500 to-red-500']}
         
-        <a href="/blog/{post.id}" class="block animate-fade-in-up group" style="animation-delay: {index * 0.2}s;">
+        <a href="/blog/{post.slug}" class="block animate-fade-in-up group" style="animation-delay: {index * 0.2}s;">
           <article class="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-purple-100/50 group-hover:shadow-3xl transition-all duration-300 cursor-pointer">
             <div class="relative aspect-video bg-gray-200 overflow-hidden">
               <img 
