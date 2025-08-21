@@ -1,7 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
-  import { asset } from '$lib/utils/paths';
+  import { asset, url } from '$lib/utils/paths';
   
   const { homepage } = siteContent;
 </script>
@@ -33,10 +33,10 @@
       </div>
       
       <div class="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center" style="animation-delay: 1.2s;">
-        <a href="/classes" class="btn btn-primary text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+        <a href={url("/classes")} class="btn btn-primary text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
           Start Your Journey
         </a>
-        <a href="/contact" class="btn btn-outline border-2 border-orange-400 text-orange-400 text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
+        <a href={url("/contact")} class="btn btn-outline border-2 border-orange-400 text-orange-400 text-xl px-10 py-5 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-2xl">
           Book Session
         </a>
       </div>
@@ -115,7 +115,7 @@
           </blockquote>
           
           <div class="text-center">
-            <a href="/about" class="btn btn-primary text-lg px-8 py-4">
+            <a href={url("/about")} class="btn btn-primary text-lg px-8 py-4">
               Learn More About Our Founder
             </a>
           </div>
@@ -240,7 +240,7 @@
     </div>
     
     <div class="text-center mt-12 animate-fade-in-up" style="animation-delay: 0.4s;">
-      <a href="/testimonials" class="btn bg-white text-indigo-900 hover:bg-indigo-50 text-lg px-8 py-4 font-semibold">
+      <a href={url("/testimonials")} class="btn bg-white text-indigo-900 hover:bg-indigo-50 text-lg px-8 py-4 font-semibold">
         Read More Stories
       </a>
     </div>
@@ -268,13 +268,13 @@
     </div>
     
     <div class="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center" style="animation-delay: 0.9s;">
-      <a href="/contact" class="group bg-white text-orange-600 hover:bg-purple-100 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
+      <a href={url("/contact")} class="group bg-white text-orange-600 hover:bg-purple-100 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
         <span class="flex items-center justify-center">
           Contact Us Today
           <Icon name="arrow_forward" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:translate-x-1 transition-transform duration-200" />
         </span>
       </a>
-      <a href="/testimonials" class="group border-3 border-white text-white hover:bg-white hover:text-orange-600 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
+      <a href={url("/testimonials")} class="group border-3 border-white text-white hover:bg-white hover:text-orange-600 font-bold text-xl px-12 py-6 rounded-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
         <span class="flex items-center justify-center">
           Read Stories
           <Icon name="favorite" style="color: currentColor; margin-left: 8px;" size="24" class="group-hover:scale-110 transition-transform duration-200" />

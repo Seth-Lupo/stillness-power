@@ -1,6 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import { asset, url } from '$lib/utils/paths';
   
   const { testimonials } = siteContent;
 </script>
@@ -181,10 +182,10 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/classes" class="bg-white text-purple-600 hover:bg-purple-50 font-bold px-8 py-3 rounded-lg transition-colors">
+          <a href={url("/classes")} class="bg-white text-purple-600 hover:bg-purple-50 font-bold px-8 py-3 rounded-lg transition-colors">
             View Class Options
           </a>
-          <a href="/contact" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-3 rounded-lg transition-colors">
+          <a href={url("/contact")} class="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-3 rounded-lg transition-colors">
             Ask Questions
           </a>
         </div>
@@ -195,7 +196,7 @@
         <div class="text-center">
           <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <img 
-              src="/images/sanjyot.jpg" 
+              src={asset("/images/sanjyot.jpg")} 
               alt="Sanjyot Lupo" 
               class="w-full h-full object-cover rounded-full"
             />

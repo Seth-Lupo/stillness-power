@@ -2,7 +2,7 @@
   import { socialLinks } from '$lib/data/content';
   import Icon from './Icon.svelte';
   import SocialIcon from './SocialIcon.svelte';
-  import { asset } from '$lib/utils/paths';
+  import { asset, url } from '$lib/utils/paths';
 </script>
 
 <footer class="bg-gray-900 text-white">
@@ -61,19 +61,19 @@
           Quick Links
         </h3>
         <div class="space-y-2">
-          <a href="/classes" class="block text-gray-300 hover:text-brand-sky transition-colors">
+          <a href={url("/classes")} class="block text-gray-300 hover:text-brand-sky transition-colors">
             Classes
           </a>
-          <a href="/about" class="block text-gray-300 hover:text-brand-sky transition-colors">
+          <a href={url("/about")} class="block text-gray-300 hover:text-brand-sky transition-colors">
             About Us
           </a>
-          <a href="/partners" class="block text-gray-300 hover:text-brand-sky transition-colors">
+          <a href={url("/partners")} class="block text-gray-300 hover:text-brand-sky transition-colors">
             Partnerships
           </a>
-          <a href="/testimonials" class="block text-gray-300 hover:text-brand-sky transition-colors">
+          <a href={url("/testimonials")} class="block text-gray-300 hover:text-brand-sky transition-colors">
             Testimonials
           </a>
-          <a href="/contact" class="block text-gray-300 hover:text-brand-sky transition-colors">
+          <a href={url("/contact")} class="block text-gray-300 hover:text-brand-sky transition-colors">
             Contact
           </a>
         </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import { url } from '$lib/utils/paths';
   
   const { homepage } = siteContent;
   
@@ -150,7 +151,7 @@
                 </ul>
               </div>
               
-              <a href="/contact" class="btn btn-primary text-lg px-8 py-4">
+              <a href={url("/contact")} class="btn btn-primary text-lg px-8 py-4">
                 Learn More & Book
               </a>
             </div>
@@ -277,7 +278,7 @@
       <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Start?</h3>
       <p class="text-gray-700 mb-6">Contact us to book your first class or ask any questions</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact" class="bg-purple-600 text-white hover:bg-purple-700 font-semibold px-8 py-3 rounded-lg transition-colors">
+        <a href={url("/contact")} class="bg-purple-600 text-white hover:bg-purple-700 font-semibold px-8 py-3 rounded-lg transition-colors">
           Book Your First Class
         </a>
         <a href="https://omstudiocentral.com/schedule-2/" target="_blank" class="bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-50 font-semibold px-8 py-3 rounded-lg transition-colors">

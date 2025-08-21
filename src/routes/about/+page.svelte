@@ -1,6 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import { asset, url } from '$lib/utils/paths';
   
   const { about } = siteContent;
 </script>
@@ -60,7 +61,7 @@
           </p>
           
           <div class="text-center">
-            <a href="/contact" class="btn btn-primary text-lg px-8 py-4">
+            <a href={url("/contact")} class="btn btn-primary text-lg px-8 py-4">
               Connect With Sanjyot
             </a>
           </div>
@@ -71,7 +72,7 @@
         <div class="relative">
           <div class="w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src="/images/sanjyot.jpg" 
+              src={asset("/images/sanjyot.jpg")} 
               alt={about.founder.name}
               class="w-full h-full object-cover"
             />
@@ -176,10 +177,10 @@
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/classes" class="bg-purple-600 text-white hover:bg-purple-700 font-bold text-lg px-8 py-4 rounded-xl transition-colors">
+          <a href={url("/classes")} class="bg-purple-600 text-white hover:bg-purple-700 font-bold text-lg px-8 py-4 rounded-xl transition-colors">
             Explore Classes
           </a>
-          <a href="/contact" class="bg-gray-100 text-purple-600 hover:bg-gray-200 font-bold text-lg px-8 py-4 rounded-xl transition-colors">
+          <a href={url("/contact")} class="bg-gray-100 text-purple-600 hover:bg-gray-200 font-bold text-lg px-8 py-4 rounded-xl transition-colors">
             Get in Touch
           </a>
         </div>

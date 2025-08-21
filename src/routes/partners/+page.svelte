@@ -1,6 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import { asset, url } from '$lib/utils/paths';
   
   const { partners } = siteContent;
 </script>
@@ -81,7 +82,7 @@
           {/each}
         </div>
         
-        <a href="/contact" class="btn btn-primary text-lg px-8 py-4 w-full">
+        <a href={url("/contact")} class="btn btn-primary text-lg px-8 py-4 w-full">
           Discuss Corporate Programs
         </a>
       </div>
@@ -115,7 +116,7 @@
           {/each}
         </div>
         
-        <a href="/contact" class="btn bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 w-full">
+        <a href={url("/contact")} class="btn bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 w-full">
           Explore Non-Profit Options
         </a>
       </div>
@@ -194,7 +195,7 @@
         <div class="relative group">
           <div class="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src="/images/group.jpg" 
+              src={asset("/images/group.jpg")} 
               alt="Group wellness session" 
               class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
@@ -289,7 +290,7 @@
           <a href="tel:+19782721339" class="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-3 rounded-lg transition-colors">
             📞 (978) 272-1339
           </a>
-          <a href="/contact" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-3 rounded-lg transition-colors">
+          <a href={url("/contact")} class="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold px-8 py-3 rounded-lg transition-colors">
             Contact Form
           </a>
         </div>

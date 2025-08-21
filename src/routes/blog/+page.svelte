@@ -1,6 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
+  import { url } from '$lib/utils/paths';
   
   const { blog } = siteContent;
   
@@ -120,7 +121,7 @@
       {#each blogPosts as post, index}
         {@const colors = ['from-purple-500 to-pink-500', 'from-blue-500 to-indigo-600', 'from-orange-500 to-red-500']}
         
-        <a href="/blog/{post.slug}" class="block animate-fade-in-up group" style="animation-delay: {index * 0.2}s;">
+        <a href={url(`/blog/${post.slug}`)} class="block animate-fade-in-up group" style="animation-delay: {index * 0.2}s;">
           <article class="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-purple-100/50 group-hover:shadow-3xl transition-all duration-300 cursor-pointer">
             <div class="relative aspect-video bg-gray-200 overflow-hidden">
               <img 
@@ -250,10 +251,10 @@
           </div>
           
           <div class="flex flex-col gap-3 mt-8">
-            <a href="/classes" class="bg-purple-600 text-white hover:bg-purple-700 font-bold py-3 px-6 rounded-lg text-center transition-colors">
+            <a href={url("/classes")} class="bg-purple-600 text-white hover:bg-purple-700 font-bold py-3 px-6 rounded-lg text-center transition-colors">
               View Classes
             </a>
-            <a href="/contact" class="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-bold py-3 px-6 rounded-lg text-center transition-colors">
+            <a href={url("/contact")} class="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-bold py-3 px-6 rounded-lg text-center transition-colors">
               Get in Touch
             </a>
           </div>

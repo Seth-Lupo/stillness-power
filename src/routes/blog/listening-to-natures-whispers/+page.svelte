@@ -1,5 +1,6 @@
 <script lang="ts">
   import Icon from '$lib/components/Icon.svelte';
+  import { url } from '$lib/utils/paths';
   
   const post = {
     id: 4,
@@ -130,7 +131,7 @@
     
     <!-- Back to Blog -->
     <div class="mt-12 pt-8 border-t border-gray-200">
-      <a href="/blog" class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-semibold transition-colors">
+      <a href={url("/blog")} class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-semibold transition-colors">
         <Icon name="arrow_back" style="color: currentColor;" size="20" />
         Back to All Articles
       </a>
