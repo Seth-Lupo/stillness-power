@@ -206,7 +206,7 @@
             </div>
             <div>
               <p class="font-semibold text-gray-800">OM Studio Central</p>
-              <p class="text-gray-600 text-sm">N Chelmsford, MA</p>
+              <p class="text-gray-600 text-sm">North Chelmsford, MA</p>
             </div>
           </div>
           

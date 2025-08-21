@@ -179,7 +179,7 @@
         <div class="space-y-6">
           <div class="flex items-center gap-4">
             <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-              <span class="text-white font-bold text-xl">20000+</span>
+              <span class="text-white font-bold text-xl">500+</span>
             </div>
             <div>
               <h3 class="font-bold text-gray-900">Students Transformed</h3>

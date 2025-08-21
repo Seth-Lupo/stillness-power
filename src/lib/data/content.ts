@@ -16,12 +16,12 @@ export const siteContent = {
     teachers: {
       title: "Our Teachers",
       description: "Our founder/creator of Stillness Power® is the master coach. Please visit OM STUDIO CENTRAL for more info.",
-      founder: "Created / Founded by Sanjyot Chatwani known Sanjyot Lupo. Stillness Power® sessions are offered at a well loved and respected yoga studio known by the name OM Studio Central based in N Chelmsford, MA."
+      founder: "Created / Founded by Sanjyot Chatwani known Sanjyot Lupo. Stillness Power® sessions are offered at a well loved and respected yoga studio known by the name OM Studio Central based in North Chelmsford, MA."
     },
     contact: {
       email: "info@omstudiocentral.com",
       phone: "(978) 302-6249",
-      address: "70 Princeton St, Suite 2, N Chelmsford, MA 01863",
+      address: "70 Princeton St, Suite 2, North Chelmsford, MA 01863",
       website: "http://www.OMStudioCentral.com"
     },
     classTypes: [

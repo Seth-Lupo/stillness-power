@@ -171,7 +171,7 @@
             <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
               <Icon name="location_on" style="color: white;" size="24" />
             </div>
-            <span class="text-lg font-semibold text-gray-800">N Chelmsford, MA</span>
+            <span class="text-lg font-semibold text-gray-800">North Chelmsford, MA</span>
           </div>
           
           <div class="hidden md:block w-px h-8 bg-gray-300"></div>

@@ -34,7 +34,7 @@
           <div>
             <p class="font-medium">OM Studio Central</p>
             <p class="text-sm">70 Princeton St, Suite 2</p>
-            <p class="text-sm">N Chelmsford, MA 01863</p>
+            <p class="text-sm">North Chelmsford, MA 01863</p>
           </div>
           <div>
             <a 
