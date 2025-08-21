@@ -12,7 +12,7 @@ export const siteContent = {
 		sessions: {
 			title: 'Our Stillness Power® Sessions',
 			description:
-				"The studio http://www.OMStudioCentral.com located in North Chelmsford, MA, runs daily classes, where all levels are welcome. But if you're a total beginner then we offer basic classes to help you find the confidence you need to get to know your body.",
+				"The studio is located in North Chelmsford, MA, runs daily classes, where all levels are welcome. But if you're a total beginner then we offer basic classes to help you find the confidence you need to get to know your body.",
 			callToAction:
 				'For more information on getting started Stillness Power® as a lifestyle, visit OM Studio Central.'
 		},

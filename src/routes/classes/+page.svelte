@@ -18,7 +18,7 @@
       ],
       duration: "60 minutes",
       level: "All levels welcome",
-      image: "/images/om-40.jpg"
+      image: asset("/images/om-40.jpg")
     },
     {
       name: "Stillness Power® Aerial",
@@ -32,7 +32,7 @@
       ],
       duration: "75 minutes", 
       level: "Intermediate recommended",
-      image: "/images/group.jpg"
+      image: asset("/images/group.jpg")
     },
     {
       name: "Stillness Power® Virtual",
@@ -160,7 +160,7 @@
               <div class="relative group">
                 <div class="w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
                   <img 
-                    src={asset(classItem.image)}
+                    src={classItem.image}
                     alt={classItem.name}
                     class="w-full h-full object-cover"
                   />
