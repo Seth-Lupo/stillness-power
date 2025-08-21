@@ -12,12 +12,12 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<section class="relative h-screen flex items-center overflow-hidden -mt-[5rem]">
   <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&auto=format')] bg-cover bg-center"></div>
   <div class="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-indigo-900/80 to-blue-900/70"></div>
 
   <div class="relative z-10 w-full">
-    <div class="mx-auto max-w-6xl px-6 text-center text-white">
+    <div class="mx-auto max-w-6xl px-6 text-center text-white pt-20">
       <div class="animate-fade-in-up" style="animation-delay: 0.2s;">
         <h1 class="text-6xl md:text-8xl font-bold mb-8 leading-tight">
           <span class="inline-block animate-slide-up" style="animation-delay: 0.3s;">Stillness</span>
