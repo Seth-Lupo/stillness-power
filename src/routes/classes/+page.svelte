@@ -1,7 +1,7 @@
 <script lang="ts">
   import { siteContent } from '$lib/data/content';
   import Icon from '$lib/components/Icon.svelte';
-   import { asset} from '$lib/utils/paths';
+  import { asset, url } from '$lib/utils/paths';
   
   const { homepage } = siteContent;
   
