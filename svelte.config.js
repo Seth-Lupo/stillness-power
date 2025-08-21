@@ -1,6 +1,24 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
+// Configure the base path for different deployment scenarios
+const getBasePath = () => {
+	// Check for custom base path environment variable first
+	if (process.env.PUBLIC_BASE_PATH !== undefined) {
+		return process.env.PUBLIC_BASE_PATH;
+	}
+	
+	// Default behavior: use repo name for GitHub Pages, empty for custom domain
+	if (process.env.NODE_ENV === 'production') {
+		// Set to empty string '' for custom domain (stillnesspower.com)
+		// Set to '/stillness-power' for GitHub Pages (seth-lupo.github.io/stillness-power)
+		return process.env.DEPLOY_TARGET === 'custom-domain' ? '' : '/stillness-power';
+	}
+	
+	// Development mode
+	return '';
+};
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
@@ -15,7 +33,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/stillness-power' : ''
+			base: getBasePath()
 		},
 		prerender: {
 			handleHttpError: ({ path, referrer, message }) => {
